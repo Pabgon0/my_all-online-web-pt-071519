@@ -1,7 +1,13 @@
 def my_all?(collection)
-  i = 0 
+  i = 0
+  new_array = []
   while i < collection.length
-  yield(ccollection[i])
+  new_array << yield(ccollection[i])
   i += 1
+  end
+  if new_array.include?(false)
+    false
+  else
+    true
   end
 end
